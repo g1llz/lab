@@ -1,2 +1,2 @@
-# lab
-A simple repository to store codes, experiments and other stuff. :coffee:
+### LAB :coffee:
+A simple repository to store codes, experiments and other stuff. 

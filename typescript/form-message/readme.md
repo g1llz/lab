@@ -1,4 +1,4 @@
-### how to use (reactive forms)
+### how to use (reactive forms, angular 2+)
 1. bootstrap is required.
 2. import this component in some module (eg. shared).
 3. in your input code:

@@ -1,0 +1,10 @@
+#custom-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row; 
+}
+
+.card {
+    margin: 5px !important;
+}

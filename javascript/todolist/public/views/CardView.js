@@ -1,6 +1,6 @@
 import View from './View.js';
 
-export default class TodoView extends View {
+export default class CardView extends View {
     
     constructor(element) {
         super(element);

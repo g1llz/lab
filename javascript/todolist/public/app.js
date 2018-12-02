@@ -1,12 +1,12 @@
-import Http from './models/Http.js';
-import Todo from './models/Todo.js';
+import Http from './services/Http.js';
+import Card from './models/Card.js';
 
-const todo = new Todo();
+const card = new Card();
 
 document.getElementById('btn-import').onclick = async () => {
     try {
         let response = await Http.get('https://randomuser.me/api/');
-        todo.add({
+        card.add({
             name: response.results[0].name.first,
             photo: response.results[0].picture.large
         });

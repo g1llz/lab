@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test validator</title>
+</head>
+<body>
+    <style>
+        .form-group {
+            display: grid;
+        }
+        .form-control {
+            padding: 5px;
+        }
+        .field-error {
+            border: 1px solid crimson;
+        }
+        .invalid-feedback {
+            color: crimson;
+            height: 25px;
+            opacity: 0;
+            font-size: 14px;
+        }
+    </style>
+
+    <form>
+        <fieldset>
+            <div class="form-group">
+                <label for="just-number">Number</label>
+                <input data-validate type="number" class="form-control" name="just-number" id="just-number" data-events="focusout, keyup" required="true">
+            </div>
+            
+            <div class="form-group">
+                <label for="sometext">Text</label>
+                <input data-validate type="text" class="form-control" name="sometext" id="sometext" data-message-default="Campo obrigatório." required="true">
+            </div>
+
+            <div class="form-group">
+                <label for="someemail">Email</label>
+                <input data-validate type="email" class="form-control" name="someemail" id="someemail" data-events="focusout, keyup" data-message-default="Email é obrigatório.", data-message-invalid="Email inválido." required="true">
+            </div>
+
+            <div class="form-group">
+                <label for="someurl">URL</label>
+                <input data-validate type="url" class="form-control" name="someurl" id="someurl" data-events="focusout, keyup" data-message-default="URL é obrigatório." data-message-invalid="URL inválida." required="true">
+            </div>
+
+            <div class="form-group">
+                <label for="somephone">Phone</label>
+                <input data-validate type="phone" class="form-control" name="somephone" id="somephone" data-events="keyup" data-message-default="Phone number is required." data-message-invalid="Telefone inválido.">
+            </div>
+
+        </fieldset>
+
+        <button type="submit">Go!</button>
+        
+    </form>
+
+    <!-- <script type="module" src="main.js"></script> -->
+    <script src="validator.refac.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            let forms = document.querySelectorAll('form');
+            validator().form(forms);
+          
+          })
+    </script>
+    
+</body>
+</html>

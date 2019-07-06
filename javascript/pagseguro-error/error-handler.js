@@ -1,4 +1,5 @@
-const errors = require('./errors')
+// TODO: this file does not check yet if the error comes to checkout or recurring-payment. implement that!
+const errors = require('./errors-checkout')
 
 function PagseguroError(e) {
 

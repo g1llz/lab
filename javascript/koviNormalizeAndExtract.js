@@ -10,7 +10,7 @@ const normalizeArr = (data) => {
 
 const compareTwoArr = (data) => {
   const payload = normalizeArr(data);
-  // FIXME: work in progress ...
+  // FIXME: work in progress..
   return payload.flatMap(x => x);
 }
 
